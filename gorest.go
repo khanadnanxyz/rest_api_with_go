@@ -10,6 +10,7 @@ import (
 func main() {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/api/books", api.BooksHandleFunc)
+	http.HandleFunc("/api/books/", api.BooksHandleFunc)
 	http.ListenAndServe(port(), nil)
 }
 
