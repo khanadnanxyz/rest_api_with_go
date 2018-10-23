@@ -74,8 +74,8 @@ func BooksHandleFunc(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// BookHandleFunc to be used as http.HandleFunc for Book API
-func BookHandleFunc(w http.ResponseWriter, r *http.Request) {
+// SingleBookHandleFunc to be used as http.HandleFunc for Book API
+func SingleBookHandleFunc(w http.ResponseWriter, r *http.Request) {
 	isbn := r.URL.Path[len("/api/books/"):]
 
 	switch method := r.Method; method {
